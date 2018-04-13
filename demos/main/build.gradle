@@ -69,4 +69,6 @@ dependencies {
     withExtensionsImplementation project(path: modulePrefix + 'extension-opus')
     withExtensionsImplementation project(path: modulePrefix + 'extension-vp9')
     withExtensionsImplementation project(path: modulePrefix + 'extension-rtmp')
+    withExtensionsImplementation project(path: modulePrefix + 'extension-okhttp')
+    implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
 }

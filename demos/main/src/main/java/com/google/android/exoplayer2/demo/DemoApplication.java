@@ -16,12 +16,15 @@
 package com.google.android.exoplayer2.demo;
 
 import android.app.Application;
+import com.google.android.exoplayer2.ext.okhttp.OkHttpDataSourceFactory;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.upstream.TransferListener;
 import com.google.android.exoplayer2.util.Util;
+import java.util.concurrent.TimeUnit;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
  * Placeholder application to facilitate overriding Application methods for debugging and testing.
@@ -30,15 +33,20 @@ public class DemoApplication extends Application {
 
   protected String userAgent;
 
-  @Override
-  public void onCreate() {
+  @Override public void onCreate() {
     super.onCreate();
     userAgent = Util.getUserAgent(this, "ExoPlayerDemo");
   }
 
   /** Returns a {@link DataSource.Factory}. */
   public DataSource.Factory buildDataSourceFactory(TransferListener<? super DataSource> listener) {
-    return new DefaultDataSourceFactory(this, listener, buildHttpDataSourceFactory(listener));
+    OkHttpClient.Builder builder = new OkHttpClient.Builder().addNetworkInterceptor(
+        new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+        .connectTimeout(10L, TimeUnit.SECONDS)
+        .writeTimeout(10L, TimeUnit.SECONDS)
+        .readTimeout(30L, TimeUnit.SECONDS);
+    return new OkHttpDataSourceFactory(builder.build(), "user-agent", listener);
+    //return new DefaultDataSourceFactory(this, listener, buildHttpDataSourceFactory(listener));
   }
 
   /** Returns a {@link HttpDataSource.Factory}. */
@@ -50,5 +58,4 @@ public class DemoApplication extends Application {
   public boolean useExtensionRenderers() {
     return BuildConfig.FLAVOR.equals("withExtensions");
   }
-
 }
