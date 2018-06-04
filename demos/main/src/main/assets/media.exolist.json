@@ -1,5 +1,232 @@
 [
   {
+    "name": "Abema Sample",
+    "samples": [
+      {
+        "name": "HLS/fMP4 ABR VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/custom/custom_sample04/playlist.m3u8"
+      },
+      {
+        "name": "HLS/fMP4 ABR LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample04/playlist.m3u8"
+      },
+      {
+        "name": "HLS/fMP4 ABR AES-128 VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/custom/custom_sample05/3/playlist.m3u8"
+      },
+      {
+        "name": "HLS/fMP4 ABR AES-128 LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample05/playlist.m3u8"
+      },
+      {
+        "name": "HLS/fMP4 ABR Widevine VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/custom/custom_sample06/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      },
+      {
+        "name": "HLS/fMP4 ABR Widevine LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample06/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      },
+      {
+        "name": "HLS/fMP4 ABR 平文 => AES-128 => Widevine VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/custom/custom_sample07/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      },
+      {
+        "name": "HLS/fMP4 ABR 平文 => AES-128 => Widevine LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample07/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      }
+    ]
+  },
+  {
+    "name": "Abema Sample (emsg box)",
+    "samples": [
+      {
+        "name": "平文 VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/gcs/hls_mp4_sample03_emsg/playlist.m3u8"
+      },
+      {
+        "name": "AES-128 VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/gcs/hls_mp4_sample04_emsg/playlist.m3u8"
+      },
+      {
+        "name": "WideVine VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/gcs/hls_mp4_sample05_emsg/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      },
+      {
+        "name": "平文(広告) VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/gcs/hls_mp4_sample06/playlist.m3u8"
+      },
+      {
+        "name": "平文 => AES-128 => Widevine => 平文(広告) VOD",
+        "uri": "https://stream-mock.abema.io/v1/vod/custom/custom_sample09/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      },
+      {
+        "name": "平文(広告) LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample08/playlist.m3u8"
+      },
+      {
+        "name": "平文 => AES-128 => Widevine => 平文(広告) LIVE",
+        "uri": "https://stream-mock.abema.io/v1/live/custom/custom_sample09/playlist.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/widevine?t=AX17zxFN462XLH7wYhAh9V3Bd7wkuDb3E11hVNT4SUQZkox3r3UQbuYuJQ3fSgiTLunfsva5UpzHipLnuWyQyTnYXaihEEyCE1Sr3aw3sGqLDm5r6UQMt8EnrhKQWZBx53nYG8XijRgddjPk62GXEzw1jZ9bKN7c5qFuxt18n5K4jzeyrWLUU8D6Q7rSSienN"
+      }
+    ]
+  },
+  {
+    "name": "My Sample",
+    "samples": [
+      {
+        "name": "HLS Plain (180p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/plain/180p/master.m3u8"
+      },
+      {
+        "name": "HLS DRM (180p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/drm/180p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (360p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/plain/360p/master.m3u8"
+      },
+      {
+        "name": "HLS DRM (360p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/drm/360p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (720p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/plain/720p/master.m3u8"
+      },
+      {
+        "name": "HLS DRM (720p)",
+        "uri": "http://160.16.54.236:8081/drmtest/media/drm/720p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (180p) -> DRM (180p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain180p-drm180p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (180p) -> DRM (360p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain180p-drm360p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (180p) -> DRM (720p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain180p-drm720p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (360p) -> DRM (180p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain360p-drm180p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (360p) -> DRM (360p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain360p-drm360p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (360p) -> DRM (720p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain360p-drm720p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (720p) -> DRM (180p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain720p-drm180p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (720p) -> DRM (360p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain720p-drm360p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS Plain (720p) -> DRM (720p)",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/plain720p-drm720p/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      },
+      {
+        "name": "HLS test",
+        "uri": "http://160.16.54.236:8081/drmtest/playlist/test/master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://proxy.uat.widevine.com/proxy"
+      }
+    ]
+  },
+  {
+    "name": "My Next Scape raw Sample",
+    "samples": [
+      {
+        "name": "HLS Plain",
+        "uri": "http://160.16.54.236:8081/nextscape/raw/03_pln_master.m3u8"
+      },
+      {
+        "name": "HLS Clearkey",
+        "uri": "http://160.16.54.236:8081/nextscape/raw/02_clrky_master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://drmasp-lcs-proxy-dev.azurewebsites.net/widevine-test"
+      },
+      {
+        "name": "HLS WideVine",
+        "uri": "http://160.16.54.236:8081/nextscape/raw/01_wdvn_master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://drmasp-lcs-proxy-dev.azurewebsites.net/widevine-test"
+      },
+      {
+        "name": "HLS WideVine -> ClearKey -> Plain",
+        "uri": "http://160.16.54.236:8081/nextscape/raw/00_all_master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://drmasp-lcs-proxy-dev.azurewebsites.net/widevine-test"
+      },
+      {
+        "name": "HLS WideVine -> ClearKey -> Plain 2",
+        "uri": "http://160.16.54.236:8081/nextscape/raw/00_allmedseq_master.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://drmasp-lcs-proxy-dev.azurewebsites.net/widevine-test"
+      }
+    ]
+  },
+  {
+    "name": "My Next Scape raw Sample 2",
+    "samples": [
+      {
+        "name": "HLS AES-128",
+        "uri": "http://160.16.54.236:8081/ns_aes128/00_all_master.m3u8"
+      },
+      {
+        "name": "HLS ClearKey",
+        "uri": "http://160.16.54.236:8081/ns_clearkey/master_c2.m3u8",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "http://13.78.35.16/clearkey"
+      }
+    ]
+  },
+  {
     "name": "YouTube DASH",
     "samples": [
       {
