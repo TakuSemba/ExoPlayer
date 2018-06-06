@@ -30,6 +30,7 @@ import com.google.android.exoplayer2.Timeline;
 import com.google.android.exoplayer2.analytics.AnalyticsListener;
 import com.google.android.exoplayer2.decoder.DecoderCounters;
 import com.google.android.exoplayer2.metadata.Metadata;
+import com.google.android.exoplayer2.metadata.emsg.EventMessage;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.LoadEventInfo;
 import com.google.android.exoplayer2.source.MediaSourceEventListener.MediaLoadData;
 import com.google.android.exoplayer2.source.TrackGroup;
@@ -447,7 +448,9 @@ public class EventLogger implements AnalyticsListener {
 
   private void printMetadata(Metadata metadata, String prefix) {
     for (int i = 0; i < metadata.length(); i++) {
-      logd(prefix + metadata.get(i));
+      EventMessage emsg = (EventMessage) metadata.get(i);
+      String data = new String(emsg.messageData);
+      logd(prefix + data);
     }
   }
 

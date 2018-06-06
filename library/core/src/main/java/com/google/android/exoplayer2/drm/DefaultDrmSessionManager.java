@@ -90,6 +90,8 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements DrmSe
 
   private static final String TAG = "DefaultDrmSessionMgr";
   private static final String CENC_SCHEME_MIME_TYPE = "cenc";
+  private static final String DRM_PROPERTY_SECURITY_LEVEL_KEY = "securityLevel";
+  private static final String DRM_PROPERTY_SECURITY_LEVEL3 = "L3";
 
   private final UUID uuid;
   private final ExoMediaDrm<T> mediaDrm;
@@ -362,6 +364,7 @@ public class DefaultDrmSessionManager<T extends ExoMediaCrypto> implements DrmSe
     mode = MODE_PLAYBACK;
     sessions = new ArrayList<>();
     provisioningSessions = new ArrayList<>();
+    mediaDrm.setPropertyString(DRM_PROPERTY_SECURITY_LEVEL_KEY, DRM_PROPERTY_SECURITY_LEVEL3);
     if (multiSession) {
       mediaDrm.setPropertyString("sessionSharing", "enable");
     }
