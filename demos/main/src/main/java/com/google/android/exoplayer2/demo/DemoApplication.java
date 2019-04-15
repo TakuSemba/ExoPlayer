@@ -16,6 +16,7 @@
 package com.google.android.exoplayer2.demo;
 
 import android.app.Application;
+import com.google.android.exoplayer2.ext.okhttp.OkHttpDataSourceFactory;
 import com.google.android.exoplayer2.offline.DownloadManager;
 import com.google.android.exoplayer2.offline.DownloaderConstructorHelper;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -30,6 +31,8 @@ import com.google.android.exoplayer2.upstream.cache.NoOpCacheEvictor;
 import com.google.android.exoplayer2.upstream.cache.SimpleCache;
 import com.google.android.exoplayer2.util.Util;
 import java.io.File;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
  * Placeholder application to facilitate overriding Application methods for debugging and testing.
@@ -63,7 +66,12 @@ public class DemoApplication extends Application {
 
   /** Returns a {@link HttpDataSource.Factory}. */
   public HttpDataSource.Factory buildHttpDataSourceFactory() {
-    return new DefaultHttpDataSourceFactory(userAgent);
+    return new OkHttpDataSourceFactory(
+        new OkHttpClient.Builder()
+            .addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .build(),
+        userAgent
+    );
   }
 
   /** Returns whether extension renderers should be used. */

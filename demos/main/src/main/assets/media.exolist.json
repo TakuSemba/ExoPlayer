@@ -1,5 +1,135 @@
 [
   {
+    "name": "Abema HLS",
+    "samples": [
+      {
+        "name": "Abema CM channel",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/commercial/playlist.m3u8"
+      },
+      {
+        "name": "Clearkey Multi-key",
+        "uri": "https://mock-stream.firebaseapp.com/dash-clearkey-multi-key/stream.mpd",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": false
+      }
+    ]
+  },
+  {
+    "name": "Abema Sample",
+    "samples": [
+      {
+        "name": "DASH widevine LIVE (CM <-> Widevine 1分間隔)",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/k-world/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "widevine",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/widevine?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2"
+      },
+      {
+        "name": "DASH clearkey LIVE (CM <-> Clearkey)",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/Smaqtest2/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH clearkey VOD",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/program/224-100_s2_p4/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH widevine VOD",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/program/224-100_s1_p1/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "widevine",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/widevine?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH clearkey <-> 平文 VOD ?",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/slot/EoSNmX5LYZsnHV/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": true,
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH widevine VOD 2",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/slot/CzwE7EQcsE2fd9/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH widevine VOD 3 ?",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/slot/8ZnpF2bZK9Geb1/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_multi_session": true,
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH widevine VOD 4",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/slot/EoSNnRktASwmks/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "widevine",
+        "drm_multi_session": false,
+        "drm_license_url": "https://license-master.abema.io/widevine?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      }
+    ]
+  },
+  {
+    "name": "Abema Dash",
+    "samples": [
+      {
+        "name": "DASH widevine LIVE",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/drm-ch/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&enc=wv&dt=pc_chrome",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH clearkey aaa",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/aaa/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH clearkey mtv-hits",
+        "uri": "https://dev-ds-linear-abematv.akamaized.net/channel/mtv-hits/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH clearkey from mizuno",
+        "uri": "https://dev-ds-vod-abematv.akamaized.net/slot/DT1CmHJmZMG1XV/manifest.mpd?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&dt=pc_chrome&enc=wv",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "https://license-master.abema.io/abematv?t=6mmEcJd4F3inT6mCpYH9Lum75aLXBYQJG4hr8wGZGQuwuAJUC2g1LN5RD6SKRTEXnZJZdwhCvC24Y3zbgUaKXBhEVzg6bE8wE11uMYqKtxp3tpEiwK1HJ2&noenc=true"
+      },
+      {
+        "name": "DASH plain my sample",
+        "uri": "https://mock-stream.firebaseapp.com/dash-plain/stream.mpd"
+      },
+      {
+        "name": "DASH clearkey my sample",
+        "uri": "https://mock-stream.firebaseapp.com/dash-clearkey/stream.mpd",
+        "drm_scheme": "clearkey"
+      },
+      {
+        "name": "DASH clearkey my sample 2",
+        "uri": "https://mock-stream.firebaseapp.com/dash-clearkey-2/stream.mpd",
+        "drm_scheme": "clearkey"
+      },
+      {
+        "name": "DASH clearkey my sample 3",
+        "uri": "https://mock-stream.firebaseapp.com/dash-clearkey-3/stream.mpd",
+        "drm_scheme": "clearkey"
+      },
+      {
+        "name": "HLS ClearKey",
+        "uri": "http://160.16.54.236:8081/ns_clearkey/master_c2.m3u8",
+        "drm_scheme": "clearkey",
+        "drm_license_url": "http://13.78.35.16/clearkey"
+      }
+    ]
+  },
+  {
     "name": "YouTube DASH",
     "samples": [
       {

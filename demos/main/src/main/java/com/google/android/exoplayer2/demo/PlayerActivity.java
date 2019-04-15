@@ -43,6 +43,7 @@ import com.google.android.exoplayer2.drm.DefaultDrmSessionManager;
 import com.google.android.exoplayer2.drm.FrameworkMediaCrypto;
 import com.google.android.exoplayer2.drm.FrameworkMediaDrm;
 import com.google.android.exoplayer2.drm.HttpMediaDrmCallback;
+import com.google.android.exoplayer2.drm.LocalMediaDrmCallback;
 import com.google.android.exoplayer2.drm.UnsupportedDrmException;
 import com.google.android.exoplayer2.mediacodec.MediaCodecRenderer.DecoderInitializationException;
 import com.google.android.exoplayer2.mediacodec.MediaCodecUtil.DecoderQueryException;
@@ -83,6 +84,8 @@ import java.net.CookieManager;
 import java.net.CookiePolicy;
 import java.util.List;
 import java.util.UUID;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /** An activity that plays media using {@link SimpleExoPlayer}. */
 public class PlayerActivity extends Activity
@@ -506,17 +509,21 @@ public class PlayerActivity extends Activity
       throws UnsupportedDrmException {
     HttpDataSource.Factory licenseDataSourceFactory =
         ((DemoApplication) getApplication()).buildHttpDataSourceFactory();
-    HttpMediaDrmCallback drmCallback =
-        new HttpMediaDrmCallback(licenseUrl, licenseDataSourceFactory);
-    if (keyRequestPropertiesArray != null) {
-      for (int i = 0; i < keyRequestPropertiesArray.length - 1; i += 2) {
-        drmCallback.setKeyRequestProperty(keyRequestPropertiesArray[i],
-            keyRequestPropertiesArray[i + 1]);
-      }
-    }
+    //LocalMediaDrmCallback drmCallback =
+    //    new LocalMediaDrmCallback("{\"keys\":[{\"kty\":\"oct\",\"k\":\"7s2ytUnwKnyXzlDBf0lMoA\",\"kid\":\"x3/uNeUf1hWnuRr8sQkcXg\"}, {\"kty\":\"oct\",\"k\":\"mrt6tsxK07hsIZPa2x54bA\",\"kid\":\"BF9+zDWEjtezwBLqdhRCLw\"}],\"type\":\"temporary\"}".getBytes());
+    //LocalMediaDrmCallback drmCallback =
+    //    new LocalMediaDrmCallback("{\"keys\":[{\"kty\":\"oct\",\"k\":\"7s2ytUnwKnyXzlDBf0lMoA\",\"kid\":\"x3/uNeUf1hWnuRr8sQkcXg\"}, {\"kty\":\"oct\",\"k\":\"mrt6tsxK07hsIZPa2x54bA\",\"kid\":\"BF9+zDWEjtezwBLqdhRCLw\"}],\"type\":\"temporary\"}".getBytes());
+    //HttpMediaDrmCallback drmCallback =
+    //    new HttpMediaDrmCallback(licenseUrl, licenseDataSourceFactory);
+    //if (keyRequestPropertiesArray != null) {
+    //  for (int i = 0; i < keyRequestPropertiesArray.length - 1; i += 2) {
+    //    drmCallback.setKeyRequestProperty(keyRequestPropertiesArray[i],
+    //        keyRequestPropertiesArray[i + 1]);
+    //  }
+    //}
     releaseMediaDrm();
     mediaDrm = FrameworkMediaDrm.newInstance(uuid);
-    return new DefaultDrmSessionManager<>(uuid, mediaDrm, drmCallback, null, multiSession);
+    return new DefaultDrmSessionManager<>(uuid, mediaDrm, new DemoMediaDrmCallback(), null, multiSession);
   }
 
   private void releasePlayer() {
