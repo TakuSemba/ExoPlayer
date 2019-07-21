@@ -13,6 +13,7 @@
 // limitations under the License.
 apply from: '../../constants.gradle'
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion project.ext.compileSdkVersion
@@ -77,6 +78,7 @@ dependencies {
     withExtensionsImplementation project(path: modulePrefix + 'extension-opus')
     withExtensionsImplementation project(path: modulePrefix + 'extension-vp9')
     withExtensionsImplementation project(path: modulePrefix + 'extension-rtmp')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply plugin: 'com.google.android.gms.strict-version-matcher-plugin'

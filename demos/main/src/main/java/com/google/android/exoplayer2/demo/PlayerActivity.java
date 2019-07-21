@@ -146,6 +146,8 @@ public class PlayerActivity extends AppCompatActivity
   private AdsLoader adsLoader;
   private Uri loadedAdTagUri;
 
+  private BitrateLimitter bitrateLimitter = new BitrateLimitter();
+
   // Activity lifecycle
 
   @Override
@@ -392,7 +394,8 @@ public class PlayerActivity extends AppCompatActivity
       TrackSelection.Factory trackSelectionFactory;
       String abrAlgorithm = intent.getStringExtra(ABR_ALGORITHM_EXTRA);
       if (abrAlgorithm == null || ABR_ALGORITHM_DEFAULT.equals(abrAlgorithm)) {
-        trackSelectionFactory = new AdaptiveTrackSelection.Factory();
+        bitrateLimitter.limitMaxBitrate(1_000_000);
+        trackSelectionFactory = new LimitTrackSelection.Factory(bitrateLimitter);
       } else if (ABR_ALGORITHM_RANDOM.equals(abrAlgorithm)) {
         trackSelectionFactory = new RandomTrackSelection.Factory();
       } else {
