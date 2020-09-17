@@ -1,5 +1,22 @@
 [
   {
+    "name": "My Sample",
+    "samples": [
+      {
+        "name": "WideVine + Dash",
+        "uri": "http://160.16.54.236:8081/drm/dash/sample.mpd",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://widevine-proxy.appspot.com/proxy"
+      },
+      {
+        "name": "WideVine + HLS",
+        "uri": "http://160.16.54.236:8081/drm/hls/h264_720p.m3u8",
+        "drm_scheme": "widevine",
+        "drm_license_url": "https://widevine-proxy.appspot.com/proxy"
+      }
+    ]
+  },
+  {
     "name": "YouTube DASH",
     "samples": [
       {
